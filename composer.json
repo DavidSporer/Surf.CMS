@@ -11,7 +11,7 @@
         "doctrine/migrations": "@dev",
         "typo3/surf": "@dev",
         "symfony/process": "2.1.9",
-        "typo3/buildessentials": "*"
+        "typo3/buildessentials": "2.3.*"
     },
     "scripts": {
         "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
