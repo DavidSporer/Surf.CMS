@@ -136,7 +136,7 @@ abstract class AbstractCliTask extends \TYPO3\Surf\Domain\Model\Task {
 		$packageExists = false;
 		$packageExists = $this->directoryExists('typo3conf/ext/' . $packageKey, $node, $application, $deployment, $options);
 		if(!$packageExists)
-		  $packageExists = $this->directoryExists('web/typo3conf/ext/' . $packageKey, $node, $application, $deployment, $options)
+		  $packageExists = $this->directoryExists('web/typo3conf/ext/' . $packageKey, $node, $application, $deployment, $options);
 		
 		return $packageExists;
 	}
