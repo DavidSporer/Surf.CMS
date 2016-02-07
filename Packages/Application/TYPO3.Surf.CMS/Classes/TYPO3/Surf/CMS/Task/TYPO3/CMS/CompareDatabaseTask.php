@@ -34,7 +34,7 @@ class CompareDatabaseTask extends AbstractCliTask {
 		}
 		$databaseCompareMode = isset($options['databaseCompareMode']) ? $options['databaseCompareMode'] : '2,4';
 		$this->executeCliCommand(
-			array('typo3/cli_dispatch.phpsh', 'extbase', 'databaseapi:databasecompare', $databaseCompareMode),
+			array('web/typo3/cli_dispatch.phpsh', 'extbase', 'databaseapi:databasecompare', $databaseCompareMode),
 			$node,
 			$application,
 			$deployment,
