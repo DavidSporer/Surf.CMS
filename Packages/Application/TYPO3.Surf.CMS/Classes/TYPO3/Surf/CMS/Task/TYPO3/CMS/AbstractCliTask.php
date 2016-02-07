@@ -111,12 +111,12 @@ abstract class AbstractCliTask extends \TYPO3\Surf\Domain\Model\Task {
 	 * @throws InvalidConfigurationException
 	 */
 	protected function getAvailableCliPackage(Node $node, Application $application, Deployment $deployment, array $options = array()) {
-		if ($this->packageExists('typo3_console', $node, $application, $deployment, $options)) {
-			return 'typo3_console';
-		}
-
 		if ($this->packageExists('coreapi', $node, $application, $deployment, $options)) {
 			return 'coreapi';
+		}
+		
+		if ($this->packageExists('typo3_console', $node, $application, $deployment, $options)) {
+			return 'typo3_console';
 		}
 
 		throw new InvalidConfigurationException('No suitable cli package found for this command! Make sure typo3_console or coreapi is available in your project, or remove this task in your deployment configuration!', 1405527176);
