@@ -38,7 +38,7 @@ class SymlinkDataTask extends \TYPO3\Surf\Domain\Model\Task {
 		$targetReleasePath = $deployment->getApplicationReleasePath($application);
 		$applicationRootDirectory = isset($options['applicationRootDirectory']) ? trim($options['applicationRootDirectory'], '/') : '';
 		$workingDirectory = escapeshellarg(Files::concatenatePaths(array($targetReleasePath, $applicationRootDirectory)));
-		$relativeDataPath = '../../shared/Data';
+		$relativeDataPath = '../../../shared/Data';
 		if (!empty($applicationRootDirectory)) {
 			$relativeDataPath = str_repeat('../', substr_count(trim($applicationRootDirectory, '/'), '/') + 1) . $relativeDataPath;
 		}
