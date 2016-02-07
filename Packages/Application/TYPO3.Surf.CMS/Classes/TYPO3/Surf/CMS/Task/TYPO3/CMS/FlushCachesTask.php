@@ -50,7 +50,7 @@ class FlushCachesTask extends AbstractCliTask {
 			case 'typo3_console':
 				return array('./typo3cms', 'cache:flush', '--force');
 			case 'coreapi':
-				return array('typo3/cli_dispatch.phpsh', 'extbase', 'cacheapi:clearallcaches');
+				return array('web/typo3/cli_dispatch.phpsh', 'extbase', 'cacheapi:clearallcaches');
 			default:
 				throw new InvalidConfigurationException('No suitable arguments could be resolved', 1405527588);
 		}
