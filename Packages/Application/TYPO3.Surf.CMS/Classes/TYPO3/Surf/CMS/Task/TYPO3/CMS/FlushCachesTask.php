@@ -47,8 +47,6 @@ class FlushCachesTask extends AbstractCliTask {
 	 */
 	protected function getSuitableCliArguments(Node $node, Application $application, Deployment $deployment, array $options = array()) {
 		switch ($this->getAvailableCliPackage($node, $application, $deployment, $options)) {
-			case 'typo3_console':
-				return array('./typo3cms', 'cache:flush', '--force');
 			case 'coreapi':
 				return array('web/typo3/cli_dispatch.phpsh', 'extbase', 'cacheapi:clearallcaches');
 			default:
